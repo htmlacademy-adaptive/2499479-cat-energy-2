@@ -5,13 +5,20 @@
   <meta charset="UTF-8">
   <title>CAT ENERGY</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- preloader -->
+  <link rel="preload" href="styles/styles.scss" as="style" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <!-- styles -->
   <link rel="stylesheet" href="styles/styles.css">
+  <!-- favicons -->
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link type="image/png" sizes="180x180" rel="apple-touch-icon" href="favicons/180.png">
   <link type="image/png" sizes="192x192" rel="icon" href="favicons/192.png">
   <link type="image/png" sizes="512x512" rel="icon" href="favicons/512.png">
   <link rel="manifest" href="manifest.json">
+  <!-- scripts -->
   <script src="scripts/index.js" defer></script>
 
 </head>
@@ -20,7 +27,7 @@
   <header class="main-header">
     <div class="main-header__navigation">
       <div class="main-header__wrapper">
-        <a class="main-header__logo" href="#">
+        <a class="main-header__logo" href="index.html">
           <picture>
             <source width="202" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/index/logo-desktop.svg">
             <source width="174" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/index/logo-tablet.svg">
@@ -28,14 +35,13 @@
           </picture>
           <img class="logo-words-mobile" src="images/index/logo-words-cat-energy-header.svg" width="101" height="18" alt="Текстовый логотип cat energy">
         </a>
-        <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <button class="main-header__toggle-close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
       </div>
-      <div class="main-nav">
-        <nav class="main-nav__wrapper">
+      <nav class="main-nav main-nav--close main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__link main-nav__link--current">
-              <a href="index.html">
+              <a href="#">
                 Главная
               </a>
             </li>
@@ -50,18 +56,21 @@
               </a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </div>
     <div class="main-header__container">
       <h1 class="main-header__title">Функциональное питание для котов</h1>
       <span class="main-header__slogan">Занялся собой? Займись котом!</span>
       <picture>
+        <source type="image/webp" media="(min-width: 1440px)" srcset="images/index/index-cat-energy-product-desktop@1x.webp 1x, images/index/index-cat-energy-product-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="images/index/index-cat-energy-product-tablet@1x.webp 1x, images/index/index-cat-energy-product-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="images/index/index-cat-energy-product-mobile@1x.webp 1x, images/index/index-cat-energy-product-mobile@2x.webp 2x">
         <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index/index-cat-energy-product-desktop@1x.png 1x, images/index/index-cat-energy-product-desktop@2x.png 2x">
         <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index/index-cat-energy-product-tablet@1x.png 1x, images/index/index-cat-energy-product-tablet@2x.png 2x">
         <img class="main-header__product" src="images/index/index-cat-energy-product-mobile@1x.png" srcset="images/index/index-cat-energy-product-mobile@2x.png 2x" width="280" height="270" alt="оранжевый стакан с продукцией cat energy со вкусом курицы">
       </picture>
-      <button class="main-header__title-button" type="button">подобрать программу</button>
+      <button class="main-header__title-button button" type="button">подобрать программу</button>
     </div>
   </header>
   <section class="services">
@@ -113,14 +122,22 @@
       </div>
     </div>
     <div class="example__slider">
-      <picture>
-        <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index/fat-cat-tablet@1x.png 1x, images/index/fat-cat-tablet@2x.png 2x">
-        <img class="example__slider-img example__slider-img--fat-cat" src="images/index/fat-cat-mobile@1x.png" srcset="images/index/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="изображение толстого котика слайд до похудения">
-      </picture>
-      <picture>
-        <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index/slim-cat-tablet@1x.png 1x, images/index/slim-cat-tablet@2x.png 2x">
-        <img class="example__slider-img example__slider-img--slim-cat" src="images/index/slim-cat-mobile@1x.png" srcset="images/index/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="изображение худого котика слайд после похудения">
-      </picture>
+      <div class="example__slider-before">
+        <picture>
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/index/fat-cat-tablet@1x.webp 1x, images/index/fat-cat-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="images/index/fat-cat-mobile@1x.webp 1x, images/index/fat-cat-mobile@2x.webp 2x">
+          <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index/fat-cat-tablet@1x.png 1x, images/index/fat-cat-tablet@2x.png 2x">
+          <img class="example__slider-img example__slider-img--fat-cat" src="images/index/fat-cat-mobile@1x.png" srcset="images/index/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="изображение толстого котика слайд до похудения">
+        </picture>
+      </div>
+      <div class="example__slider-after">
+        <picture>
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/index/slim-cat-mobile@1x.webp 1x, images/index/slim-cat-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="images/index/slim-cat-mobile@1x.webp 1x, images/index/slim-cat-mobile@2x.webp 2x">
+          <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index/slim-cat-tablet@1x.png 1x, images/index/slim-cat-tablet@2x.png 2x">
+          <img class="example__slider-img example__slider-img--slim-cat" src="images/index/slim-cat-mobile@1x.png" srcset="images/index/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="изображение худого котика слайд после похудения">
+        </picture>
+      </div>
       <button class="example__slider-button" type="button">
         <span class="visually-hidden">Передвинуть ползунок слайдера</span>
       </button>
@@ -139,6 +156,9 @@
         </div>
         <div class="contacts__geoposition"><span class="visually-hidden">Геолокация магазина Cat Energy</span>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/location-cat-energy-desktop@1x.webp 1x, images/location-cat-energy-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/location-cat-energy-tablet@1x.webp 1x, images/location-cat-energy-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="images/location-cat-energy-mobile@1x.webp 1x, images/location-cat-energy-mobile@2x.webp 2x">
             <source width="1440" height="400" type="image/jpg" media="(min-width: 1440px)" srcset="images/location-cat-energy-desktop@1x.jpg 1x, images/location-cat-energy-desktop@2x.jpg 2x">
             <source width="768" height="400" type="image/jpg" media="(min-width: 768px)" srcset="images/location-cat-energy-tablet@1x.jpg 1x, images/location-cat-energy-tablet@2x.jpg 2x">
             <img class="geoposition-map" src="images/location-cat-energy-mobile@1x.jpg" srcset="images/location-cat-energy-mobile@2x.jpg 2x" width="320" height="362" alt="расположение магазина cat energy на карте по адресу: город Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
@@ -152,14 +172,14 @@
             <img class="social__logo" src="images/index/logo-words-cat-energy-footer.svg" width="128" height="24" alt="Текстовый логотип cat-energy">
           </a>
           <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
+            <li class="social__item" tabindex="0">
+              <a class="social__link social__link--vkontakte" tabindex="-1" href="https://vk.com/htmlacademy">Вконтакте</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Ютуб</a>
+            <li class="social__item" tabindex="0">
+              <a class="social__link social__link--youtube" tabindex="-1" href="https://www.youtube.com/user/htmlacademyru">Ютуб</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Телеграмм</a>
+            <li class="social__item" tabindex="0">
+              <a class="social__link social__link--telegram" tabindex="-1" href="https://t.me/htmlacademy">Телеграмм</a>
             </li>
           </ul>
         </div>
@@ -169,6 +189,7 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
