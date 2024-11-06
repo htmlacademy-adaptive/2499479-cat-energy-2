@@ -103,6 +103,16 @@
 .contacts__geoposition {
   margin: 0;
   padding: 0;
+  min-width: 320px;
+  min-height: 362px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+  }
 }
 
 .contacts__geoposition iframe {
