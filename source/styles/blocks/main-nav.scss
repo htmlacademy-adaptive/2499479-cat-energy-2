@@ -8,7 +8,12 @@
     z-index: 3;
   }
 
+  @media (min-width: $tablet-width) {
+    max-width: 472px;
+  }
+
   @media (min-width: $desktop-width) {
+    max-width: 512px;
     background-color: transparent;
   }
 }
@@ -24,13 +29,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
+    justify-content: start;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
     padding-right: 0;
-    justify-content: end;
   }
 }
 
@@ -41,12 +45,12 @@
 
   @media (min-width: $tablet-width) {
     border: none;
-    padding-left: 34px;
+    padding-left: 32px;
   }
 }
 
 .main-nav__link {
-  font-family: "Oswald", sans-serif;
+  font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
@@ -60,7 +64,7 @@
     font-size: 18px;
     line-height: 24px;
     border: none;
-    margin-left: 35px;
+    margin-left: 34px;
   }
 
   @media (min-width: $desktop-width) {
@@ -194,8 +198,26 @@
   }
 }
 
+.main-nav.main-nav--nojs {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+  }
+}
+
 .main-nav--nojs .main-nav__toggle {
-  display: none;
+  position: absolute;
+  z-index: 3;
+  background-color: #ffffff;
+  background-image: url("../../icons/stack.svg#icon-cross");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  top: -44px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .main-nav--nojs .main-nav__wrapper {
